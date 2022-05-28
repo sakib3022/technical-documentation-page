@@ -17,7 +17,6 @@ body {
 #nav-bar {
     grid-area: "navbar";
     border-right: 2px solid gray;
-    overflow-y: scroll;
 
 }
 
@@ -52,7 +51,7 @@ section ul {
 
 @media screen and (max-width:700px) {
 
-    body {
+    /* body {
         font-family: 'Raleway', sans-serif;
         display: grid;
         grid-template-columns: minmax(100px, auto) 1fr;
@@ -64,6 +63,15 @@ section ul {
         font-size: 1em;
         font-weight: bold;
         padding: 15px 10px;
+    }
+
+    #nav-bar {
+        position: inherit;
+    } */
+
+    body {
+        grid-template-columns: 1fr;
+        grid-template-areas: "navbar""maindoc";
     }
 
 }
