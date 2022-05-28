@@ -30,6 +30,37 @@ body {
 
 }
 
+#toggle {
+    display: none;
+}
+
+.toggle-area {
+    background-color: white;
+    padding: 10px;
+    border-bottom: 2px solid white;
+    display: flex;
+    justify-content: flex-start;
+    display: none;
+}
+
+.toggle-area label {
+    height: 40px;
+    width: 40px;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.toggle-area label span {
+    background-color: black;
+    height: 3px;
+    width: 70%;
+    margin: 2px 0px;
+}
+
 #main-doc {
     grid-area: "maindoc";
 }
@@ -51,36 +82,16 @@ section ul {
 }
 
 @media screen and (max-width:700px) {
-    body {
-        font-family: 'Raleway', sans-serif;
-        display: grid;
-        grid-template-columns: minmax(100px, auto) 1fr;
-        grid-template-areas: "navbar maindoc";
-        grid-gap: 10px;
+
+    #nav-bar {
+        display: none;
     }
 
-    #nav-bar a {
-        border-top: 2px solid black;
+    #toggle:checked+#nav-bar {
         display: block;
-        text-decoration: none;
-        color: black;
-        padding: 5px 0px;
-
     }
 
-    header {
-        font-size: 1em;
-        font-weight: bold;
-        padding: 5px 0px;
-    }
-
-    section p {
-        padding: 5px 17px;
-        text-align: justify;
-    }
-
-    section ul {
-        padding: 5px 45px;
-        text-align: justify;
+    .toggle-area {
+        display: flex;
     }
 }
